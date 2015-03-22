@@ -1,0 +1,11 @@
+
+class Hamming
+  def self.compute(word1, word2)
+    return 0 if word1 == word2
+    word1.size.times.count { |i| word1[i] != word2[i] }
+  end
+
+  def self.compute_no_if(word1, word2)
+    word1.size.times.count { |i| word1[i] != word2[i] }
+  end
+end
