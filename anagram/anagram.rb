@@ -1,18 +1,18 @@
 class Anagram
 
- def initialize(word)
-  @word = word
- end
+  def initialize(word)
+    @word = word
+  end
 
- def match(word_array)
+  def match(word_array)
     @permutations = get_permutations
     @permutations.delete(@word)
     find_word(word_array)
- end
+  end
 
- private
+  private
 
- def find_word(word_array)
+  def find_word(word_array)
     word_array.find_all do |word|
       @permutations.include? word.downcase
     end
