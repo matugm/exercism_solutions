@@ -9,7 +9,7 @@ class CircularBuffer
   end
 
   def read
-    raise BufferEmptyException if @buffer.empty?
+    raise BufferEmptyException if empty?
     @buffer.shift
   end
 
@@ -22,6 +22,10 @@ class CircularBuffer
     raise BufferFullException if full?
 
     @buffer << data
+  end
+
+  def empty?
+    @buffer.empty?
   end
 
   def full?

@@ -14,8 +14,8 @@ module BobMessages
     response: "Fine. Be that way!"
   )
 
-  response = OpenStruct.new(response: "Whatever.")
-  DefaultMessage = OpenStruct.new(call: response)
+  default_response = OpenStruct.new(response: "Whatever.")
+  DefaultMessage   = OpenStruct.new(call: default_response)
 end
 
 class Message
