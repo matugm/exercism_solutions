@@ -8,35 +8,39 @@ class SpaceAge
     @seconds = seconds
   end
 
+  def calculate_year(multiplier)
+    @seconds / (EARTH_YEAR * multiplier)
+  end
+
   def on_earth
-    @seconds / EARTH_YEAR
+    calculate_year 1
   end
 
   def on_mercury
-    @seconds / (EARTH_YEAR * 0.2408467)
+    calculate_year 0.2408467
   end
 
   def on_venus
-    @seconds / (EARTH_YEAR * 0.61519726)
+    calculate_year 0.61519726
   end
 
   def on_mars
-    @seconds / (EARTH_YEAR * 1.8808158)
+    calculate_year 1.8808158
   end
 
   def on_jupiter
-    @seconds / (EARTH_YEAR * 11.862615)
+    calculate_year 11.862615
   end
 
   def on_saturn
-    @seconds / (EARTH_YEAR * 29.447498)
+    calculate_year 29.447498
   end
 
   def on_uranus
-    @seconds / (EARTH_YEAR * 84.016846)
+    calculate_year 84.016846
   end
 
   def on_neptune
-    @seconds / (EARTH_YEAR * 164.79132)
+    calculate_year 164.79132
   end
 end
